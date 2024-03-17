@@ -21,7 +21,7 @@ android {
         resValue("string", "PKG_NAME", "\"${System.getenv("PKG_NAME")}\"")
     }
 
-    /*signingConfigs {
+    signingConfigs {
         create("release") {
             def keystoreProperties = new Properties()
             def keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -34,11 +34,11 @@ android {
             keyAlias = keystoreProperties.getProperty("keyAlias")
             keyPassword = keystoreProperties.getProperty("keyPassword")
         }
-    }*/
+    }
 
     buildTypes {
         release {
-            /*signingConfig = signingConfigs.getByName("release")*/
+            signingConfig = signingConfigs.getByName("release")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
