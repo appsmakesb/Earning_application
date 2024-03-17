@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:drawableTop="@drawable/ic_headline_money"
+            android:fontFamily="@font/bold"
+            android:text="SIGN UP"
+            android:textColor="@color/white"
+            android:textSize="60sp" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/top_round_white"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edi_view"
+                android:fontFamily="@font/normal"
+                android:hint="Enter full name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editbox_bg"/>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edi_view"
+                android:fontFamily="@font/normal"
+                android:hint="Enter email address"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:inputType="textEmailAddress"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editbox_bg"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edi_view"
+                android:fontFamily="@font/normal"
+                android:hint="Enter 6 digit password"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:inputType="textPassword"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editbox_bg"/>
+            <EditText
+                android:id="@+id/c_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edi_view"
+                android:fontFamily="@font/normal"
+                android:hint="Enter retype password"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editbox_bg"/>
+            <EditText
+                android:id="@+id/refer_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edi_view"
+                android:fontFamily="@font/normal"
+                android:hint="Enter refer code"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/editbox_bg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/normal"
+                android:text="Doesn't have refer code use: 1234"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:id="@+id/signup_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edi_view"
+                android:fontFamily="@font/bold"
+                android:text="SIGN UP"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rectengle_purple_btn"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/normal"
+                    android:text="Already Register?"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/purple_700"/>
+                <TextView
+                    android:id="@+id/signin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="Sign in."
+                    android:layout_marginLeft="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/purple_700" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

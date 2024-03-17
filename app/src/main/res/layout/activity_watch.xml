@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WatchActivity"
+    android:background="@drawable/rectengle_purple_btn"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/purple_500"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/back_bar"
+                android:layout_width="@dimen/toolbar_main"
+                android:layout_height="@dimen/toolbar_main"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:background="@drawable/round_purple_btn"
+                android:src="@drawable/ic_baseline_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/back_bar"
+                android:fontFamily="@font/bold"
+                android:text="Watch and Earn"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardPreventCornerOverlap="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:src="@drawable/banner"
+                        android:contentDescription="@string/app_name"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:weightSum="2">
+                        <TextView
+                            android:id="@+id/count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bold"
+                            android:text="0/0"
+                            android:gravity="center"
+                            android:layout_marginRight="50dp"
+                            android:drawableRight="@drawable/ic_sync"
+                            android:background="@drawable/rectengle_purple_btn"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp">
+                <RelativeLayout
+                    android:id="@+id/task_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/c"
+                        android:layout_width="@dimen/list_view"
+                        android:layout_height="@dimen/list_view"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/ic_play" />
+
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/c"
+                        android:layout_toLeftOf="@id/play_btn"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Watch Video"
+                            android:fontFamily="@font/bold"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/purple_500"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Play video and earn money"
+                            android:fontFamily="@font/italic"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/play_btn"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/edi_view"
+                        android:text="PLAY"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/bold"
+                        android:background="@drawable/rectengle_purple_btn"/>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:textAlignment="center"
+                    android:drawableTop="@drawable/ic_stopwatch"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/purple_500" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/click_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="visible"
+                app:cardPreventCornerOverlap="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/rc"
+                        android:layout_width="@dimen/list_view"
+                        android:layout_height="@dimen/list_view"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/ic_gift_box" />
+
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/rc"
+                        android:layout_toLeftOf="@+id/click_btn"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Complete Survey"
+                            android:fontFamily="@font/bold"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/purple_500"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Complete Survey and earn money"
+                            android:fontFamily="@font/italic"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/click_btn"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/edi_view"
+                        android:text="GET BONUS"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/bold"
+                        android:background="@drawable/rectengle_purple_btn"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_auto_image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/loading"/>
+    <TextView
+        android:id="@+id/tv_auto_image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_500"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+</RelativeLayout>

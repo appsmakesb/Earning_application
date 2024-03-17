@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_main">50dp</dimen>
+    <dimen name="list_view">50dp</dimen>
+    <dimen name="edi_view">45dp</dimen>
+</resources>

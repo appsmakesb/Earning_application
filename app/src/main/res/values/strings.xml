@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">@string/APP_LABEL</string>
+
+    <string name="animation_type">right-to-left</string>
+    <string name="home_animation_type">left-to-right</string>
+
+    <string name="ZONE_IDS">aa</string>
+    <string name="APP_ID">aa</string>
+
+
+    <string name="APPLOVIN">aaaa</string>
+
+
+</resources>
